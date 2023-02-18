@@ -1,54 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css"> <!-- reset.css가 뭐징 -->
-    <link rel="stylesheet" href="JY_Project2.css">
-    
-    <title>해야할 일</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="TODOLIST.CSS" />
+    <title>To do List</title>
 </head>
-<body>
-    <div class="todo-wrapper">
-        <div class="todo-title">To do List</div>
-        <div class="todo-box">
 
-            <div class="todo-input-box">
-                <button class="complete-all-btn">✔</button>
-                <input type="text" class="todo-input" placeholder="할 일 입력">
-            </div>
-            
-            <ul class="todo-list">
-                    <li class="todo-item checked">
-                    <div class="checkbox">✔</div>
-                    <div class="todo">첫번째 할 일</div>
-                    <button class="delBtn">x</button>
-                </li>
-                <li class="todo-item">
-                    <div class="checkbox"></div>
-                    <div class="todo">두번째 할 일</div>
-                    <button class="delBtn">x</button>
-                </li>
-                <li class="todo-item">
-                    <div class="checkbox"></div>
-                    <div class="todo">세번째 할 일</div>
-                    <button class="delBtn">x</button>
-                </li>
-            </ul>
-            <div class="todo-bottom">
-                <div class="left-items">3 items left</div>
-                <div class="button-group">
-                    <button class="show-all-btn selected" data-type="all">All</button>
-                    <button class="show-active-btn" data-type="active">Active</button>
-                    <button class="show-completed-btn" data-type="completed">Completed</button>
-                </div>
-                <button class="clear-completed-btn">Clear Completed</button>
-            </div>
+<body>
+<h1 id="title">To Do List</h1>
+    <div class="container">
+        <div class="input-container">
+            <form id="frm" onsubmit="return false;"><!--form의 default submit을 제거해주는 코드-->
+                <input id="input" type="text" placeholder="할 일을 입력하세요." />
+                <input id="add-button" type="submit" value="추가하기" />
+                <button class="Clear">전체 삭제</button>
+                <!--form 형태로 엔터 키를 눌러도 작동하게 만들어보기-->
+            </form>
         </div>
-        <p class='info'>더블클릭으로 수정</p>
-       
+        <div class="list-container">
+            <h3>할 일 목록</h3>
+            <ul id="list">
+                <!--예시 입력하고 새로 입력하면 지워지도록 기능 추가(?)-->
+            </ul>
+        </div>
     </div>
-    <script src="JY_Project2.js" ></script>
 </body>
+<script src="TODOLIST.JS"></script>
+
 </html>
