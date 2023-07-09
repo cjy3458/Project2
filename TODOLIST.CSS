@@ -47,6 +47,10 @@ body {
   width: 20%;
 }
 
+.checked {
+  text-decoration: line-through;
+}
+
 #add-button {
   width: 20%;
   height: 100%;
@@ -61,13 +65,19 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 48px;
-  width: 80%;
+  width: 60%;
   height: 420px; /*높이를 설정하고*/
   align-self: center;
   border-radius: 4px;
   border: 3px solid #b67d7d;
   background-color: white;
   overflow-y: scroll; /*높이를 벗어나면 스크롤 형식으로 바뀌도록 기능 추가*/
+}
+
+.li_div {
+  width: 60px;
+  display: flex;
+  justify-content: space-between;
 }
 
 h3 {
@@ -86,6 +96,7 @@ h3 {
 }
 
 #list {
+  width: 500px;
   margin: 32px 0;
   display: flex;
   justify-content: space-between;
@@ -93,15 +104,90 @@ h3 {
 }
 
 .list-item {
-  border-bottom: 1px solid #eaeaea;
-  margin-right: 32px;
-  padding: 16px 0;
-  font-size: 14px;
-  flex: 0 0 50%; /*뭔지 확인*/
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid #eaeaea;
+  /* margin-right: 32px; */
+  padding: 8px 0;
+  font-size: 20px;
+  flex: 0 0 100%;
 }
 
-.check-box {
-  background-color: #613232;
+/* 체크박스 컨테이너 스타일 */
+.checkbox-container {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
 }
-/*체크박스 css인데 적용이 안됌. 이유를 도저히 모르겠음 */
-/*css는 나중에 하기로 결정*/
+
+/* 체크박스 숨기기 */
+.checkbox-container input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* 체크박스 커스텀 디자인 */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: grey;
+  border-radius: 3px;
+}
+
+/* 체크 표시 스타일 */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  /* display: none; */
+}
+
+/* 체크된 상태의 체크박스 */
+.checkbox-container input[type="checkbox"]:checked + .checkmark:after {
+  display: block;
+}
+
+/* 체크 표시 아이콘 스타일 */
+.checkbox-container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* 체크박스 컨테이너에 마우스를 올렸을 때 */
+.checkbox-container:hover .checkmark {
+  background-color: #ccc;
+}
+
+/* X 버튼 스타일 */
+.delete-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 21px;
+  height: 21px;
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* X 버튼 텍스트 스타일 */
+.delete-button span {
+  display: inline-block;
+  line-height: 1;
+}
+
+/* X 버튼에 마우스를 올렸을 때 */
+.delete-button:hover {
+  background-color: #ccc;
+}
