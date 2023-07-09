@@ -1,14 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+/* html {
+  height: 100%;
+} */
+
 body {
   background-color: #f4ded2;
+  font-family: "Fredoka One", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .container {
   display: flex; /*디스플레이 플렉스 == 요소들을 중앙으로*/
   flex-direction: column; /*요소들을 위에서 아래로 쌓이게*/
   padding: 32px 0;
+  width: 1000px;
 }
 
 .input-container {
-  width: 80%;
+  width: 500px;
   display: flex;
   align-self: center;
   justify-content: space-between;
@@ -70,7 +81,7 @@ h3 {
   padding: 2rem;
   text-align: center;
   color: rosybrown;
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin-bottom: 0.1%;
 }
 
