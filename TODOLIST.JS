@@ -54,4 +54,23 @@ function addToList(text) {
 /*const는 변경이 안되는데 i를 const로 선언해서 그런거였음 현재는 해결 */
 
 /*여기서부터 완료된 할 일 목록 함수 */
-checked.addEventListener("checked", () => {});
+clearButton.addEventListener("click", () => {
+  const header = document.querySelectorAll(".list-item");
+  const cb = document.querySelectorAll(".check-box");
+  const db = document.querySelectorAll("delete-button");
+
+  for (let i = 0; i < header.length; i++) {
+    const item = header.item(i);
+    item.parentNode.removeChild(item);
+  }
+
+  for (let i = 0; i < cb.length; i++) {
+    const it = cb.item(i);
+    it.parentNode.removeChild(it);
+  }
+
+  for (let i = 0; i < cb.length; i++) {
+    const deldel = db.item(i);
+    it.parentNode.removeChild(deldel);
+  }
+});

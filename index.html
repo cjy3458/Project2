@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="TODOLIST.CSS" />
     <title>To do List</title>
-</head>
+  </head>
 
-<body>
-<h1 id="title">To Do List</h1>
+  <body>
+    <h1 id="title">To Do List</h1>
     <div class="container">
-        <div class="input-container">
-            <form id="frm" onsubmit="return false;"><!--form의 default submit을 제거해주는 코드-->
-                <input id="input" type="text" placeholder="할 일을 입력하세요." />
-                <input id="add-button" type="submit" value="추가하기" />
-                <button class="Clear">전체 삭제</button>
-                <!--form 형태로 엔터 키를 눌러도 작동하게 만들어보기-->
-            </form>
-        </div>
-        <div class="list-container">
-            <h3>할 일 목록</h3>
-            <ul id="list">
-                <!--예시 입력하고 새로 입력하면 지워지도록 기능 추가(?)-->
-            </ul>
-        </div>
+      <div class="input-container">
+        <form id="frm" onsubmit="return false;">
+          <!--form의 default submit을 제거해주는 코드-->
+          <input id="input" type="text" placeholder="할 일을 입력하세요." />
+          <input id="add-button" type="submit" value="추가하기" />
+          <button class="Clear">전체 삭제</button>
+          <!--form 형태로 엔터 키를 눌러도 작동하게 만들어보기-->
+        </form>
+      </div>
+      <div class="list-container">
+        <h3>할 일 목록</h3>
+        <ul id="list">
+          <!--예시 입력하고 새로 입력하면 지워지도록 기능 추가(?)-->
+        </ul>
+      </div>
     </div>
-</body>
-<script src="TODOLIST.JS"></script>
-
+  </body>
+  <script src="TODOLIST.JS"></script>
 </html>
